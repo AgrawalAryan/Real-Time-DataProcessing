@@ -33,20 +33,6 @@ The primary goal is to build a dynamic pricing model that updates prices in real
 
 ---
 
-## How to Run the Project
-
-1.  **Prerequisites:** A Google account to run the code in Google Colab.
-2.  **Open the Notebook:** Upload the `Dynamic_Parking_Pricing.ipynb` file to your Google Colab environment.
-3.  **Execute the Code:** Run all the cells in the notebook from top to bottom. The notebook is self-contained and will:
-    *   Install all necessary dependencies.
-    *   Download the dataset.
-    *   Perform feature engineering.
-    *   Define and run the real-time pricing models using Pathway.
-    *   Display an interactive Bokeh dashboard showing the results.
-4.  **Observe the Output:** An interactive plot will appear below the final code cell. This dashboard will update in real-time as the 73 days of simulated data are processed, showing the daily prices calculated by the different models.
-
----
-
 ## Methodology and Model Implementation
 
 The core of the project is a Pathway streaming pipeline that ingests parking data, applies pricing logic, and outputs the results for visualization. The data is aggregated on a **daily tumbling window**, meaning a single price is calculated for each day, representing the average conditions across all lots.
